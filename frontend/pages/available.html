@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Donations | FoodBridge</title>
+  <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/interactive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">FoodBridge</a>
+      <nav class="nav-links">
+        <a href="available.html">Available donations</a>
+        <a href="ngo-dashboard.html">My claims</a>
+        <a href="#" id="logout-link">Log out</a>
+      </nav>
+    </div>
+      
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Available donations</h1>
+      <p>Food ready for collection. Claim what your NGO can pick up.</p>
+    </div>
+
+    <div id="form-message" class="form-message" role="alert"></div>
+
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Search by food name">
+      <select id="category-filter">
+        <option value="">All categories</option>
+        <option value="COOKED_MEAL">Cooked meal</option>
+        <option value="BAKERY">Bakery</option>
+        <option value="FRUITS_VEGETABLES">Fruits and vegetables</option>
+        <option value="PACKAGED">Packaged food</option>
+        <option value="DAIRY">Dairy</option>
+        <option value="OTHER">Other</option>
+      </select>
+    </div>
+
+    <section class="donation-list" id="donation-list"></section>
+  </main>
+
+  
+    <script src="../js/format.js"></script>
+  <script src="../js/validation.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/available.js"></script>
+  <script src="../js/ui.js"></script>
+</body>
+</html>

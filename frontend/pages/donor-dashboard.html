@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donor Dashboard | FoodBridge</title>
+  <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/interactive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">FoodBridge</a>
+      <nav class="nav-links">
+        <a href="donor-dashboard.html">Dashboard</a>
+        <a href="donate.html">Donate food</a>
+               <a href="#" id="logout-link">Log out</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Donor dashboard</h1>
+      <p>Your donations and their current status.</p>
+    </div>
+
+    <section class="stats" id="stats"></section>
+
+    <div class="toolbar">
+      <label for="status-filter">Show:</label>
+      <select id="status-filter">
+        <option value="">All statuses</option>
+        <option value="AVAILABLE">Available</option>
+        <option value="ACCEPTED">Accepted</option>
+        <option value="COLLECTED">Collected</option>
+        <option value="CANCELLED">Cancelled</option>
+        <option value="EXPIRED">Expired</option>
+      </select>
+      <a href="donate.html" class="btn btn-primary btn-small">+ New donation</a>
+    </div>
+
+    <section class="donation-list" id="donation-list"></section>
+  </main>
+
+  <!-- Order matters: helpers first, then data, then the page script. -->
+    <script src="../js/format.js"></script>
+  <script src="../js/validation.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/donor-dashboard.js"></script>
+  <script src="../js/ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Food | FoodBridge</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">FoodBridge</a>
+      <nav class="nav-links">
+        <a href="donor-dashboard.html">My donations</a>
+                <a href="#" id="logout-link">Log out</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card form-card">
+      <h1>Donate food</h1>
+      <p class="hint">Fields marked * are required.</p>
+
+      <div id="form-message" class="form-message" role="alert"></div>
+
+      <form id="donation-form" novalidate>
+        <div class="form-group">
+          <label for="food_name">Food name *</label>
+          <input type="text" id="food_name" name="food_name" maxlength="100">
+          <div class="field-error" id="food_name-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" rows="3" maxlength="500"></textarea>
+          <div class="hint">Max 500 characters.</div>
+          <div class="field-error" id="description-error"></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="category">Category *</label>
+            <select id="category" name="category">
+              <option value="">Choose...</option>
+              <option value="COOKED_MEAL">Cooked meal</option>
+              <option value="BAKERY">Bakery</option>
+              <option value="FRUITS_VEGETABLES">Fruits and vegetables</option>
+              <option value="PACKAGED">Packaged food</option>
+              <option value="DAIRY">Dairy</option>
+              <option value="OTHER">Other</option>
+            </select>
+            <div class="field-error" id="category-error"></div>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity *</label>
+            <input type="number" id="quantity" name="quantity" min="1" step="1">
+            <div class="field-error" id="quantity-error"></div>
+          </div>
+          <div class="form-group">
+            <label for="unit">Unit *</label>
+            <select id="unit" name="unit">
+              <option value="">Choose...</option>
+              <option value="PORTIONS">Portions</option>
+              <option value="KG">Kilograms</option>
+              <option value="ITEMS">Items</option>
+              <option value="LITRES">Litres</option>
+            </select>
+            <div class="field-error" id="unit-error"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prepared_at">Prepared at</label>
+            <input type="datetime-local" id="prepared_at" name="prepared_at">
+            <div class="field-error" id="prepared_at-error"></div>
+          </div>
+          <div class="form-group">
+            <label for="expires_at">Collect before *</label>
+            <input type="datetime-local" id="expires_at" name="expires_at">
+            <div class="field-error" id="expires_at-error"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="pickup_area">Pickup area *</label>
+          <input type="text" id="pickup_area" name="pickup_area" maxlength="100">
+          <div class="hint">Shown to all NGOs, for example "Saket, Delhi".</div>
+          <div class="field-error" id="pickup_area-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="pickup_address">Full pickup address *</label>
+          <textarea id="pickup_address" name="pickup_address" rows="2" maxlength="255"></textarea>
+          <div class="hint">Shown only to the NGO that claims this donation.</div>
+          <div class="field-error" id="pickup_address-error"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Submit donation</button>
+      </form>
+    </div>
+  </main>
+  <script src="../js/format.js"></script>
+  <script src="../js/validation.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/donate.js"></script>
+  <script src="../js/ui.js"></script>
+</body>
+</html>
+
+</body>
+</html>

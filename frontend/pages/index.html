@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodBridge | Connect Surplus Food with Those Who Need It</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">FoodBridge</a>
+      <nav class="nav-links">
+        <a href="#how-it-works">How it works</a>
+        <a href="#benefits">Benefits</a>
+        <a href="login.html">Log in</a>
+        <a href="register.html" class="btn btn-primary">Sign up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Less waste, more meals</span>
+          <h1>Turn surplus food into <em>meals</em> for people who need them</h1>
+          <p class="lead">FoodBridge connects food donors with NGOs. Donors list what they can spare, and NGOs claim it for collection, in minutes.</p>
+          <div class="hero-actions">
+            <a href="register.html?role=DONOR" class="btn btn-primary">Donate food</a>
+            <a href="register.html?role=NGO" class="btn btn-outline">Find donations</a>
+          </div>
+        </div>
+        <div class="demo-wrap" aria-hidden="true">
+          <div class="card demo-card">
+            <div class="demo-top">
+              <h3>Vegetable biryani</h3>
+              <span class="badge badge-available"><span class="pulse-dot"></span>Available</span>
+            </div>
+            <p class="demo-meta">40 portions &middot; Saket, Delhi</p>
+            <p class="demo-meta">Collect before 8:30 PM today</p>
+          </div>
+          <div class="card demo-card">
+            <div class="demo-top">
+              <h3>Bread loaves</h3>
+              <span class="badge badge-accepted">Accepted</span>
+            </div>
+            <p class="demo-meta">25 items &middot; Connaught Place</p>
+          </div>
+          <p class="demo-label">Illustration of a donation card</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="impact">
+        <div class="card reveal"><strong data-count="2">0</strong><span>Roles: donors and NGOs</span></div>
+        <div class="card reveal"><strong data-count="3">0</strong><span>Steps from listing to pickup</span></div>
+        <div class="card reveal"><strong data-count="1">0</strong><span>Winner per donation, guaranteed</span></div>
+        <div class="card reveal"><strong data-count="100" data-suffix="%">0</strong><span>Address privacy until claimed</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How it works</h2>
+        <p class="section-sub">From a full kitchen to a full plate in three steps.</p>
+        <div class="grid grid-3 steps">
+          <div class="card reveal">
+            <span class="step-number">1</span>
+            <h3>Donors list food</h3>
+            <p>Add what you have, how much, and when it must be collected.</p>
+          </div>
+          <div class="card reveal">
+            <span class="step-number">2</span>
+            <h3>NGOs claim it</h3>
+            <p>Registered NGOs browse available donations and claim what they can collect.</p>
+          </div>
+          <div class="card reveal">
+            <span class="step-number">3</span>
+            <h3>Food gets collected</h3>
+            <p>Both sides track the status until the food is picked up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="benefits">
+      <div class="container" data-tabs>
+        <h2 class="section-title">Built for both sides</h2>
+        <p class="section-sub">Pick a role to see what FoodBridge does for you.</p>
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab active" data-tab="donors">For donors</button>
+          <button type="button" class="tab" data-tab="ngos">For NGOs</button>
+        </div>
+        <div class="panel" data-panel="donors">
+          <ul class="benefit-list">
+            <li><h3>List in minutes</h3><p>One short form: food, quantity, deadline, address.</p></li>
+            <li><h3>Stay in control</h3><p>Cancel any donation until it has been claimed.</p></li>
+            <li><h3>Your address stays private</h3><p>Only the NGO that claims your donation ever sees it.</p></li>
+          </ul>
+        </div>
+        <div class="panel" data-panel="ngos" hidden>
+          <ul class="benefit-list">
+            <li><h3>Find what is fresh</h3><p>Search and filter available donations by category.</p></li>
+            <li><h3>Claim with confidence</h3><p>Only one NGO can win a claim, so no double trips.</p></li>
+            <li><h3>Pickup details on claim</h3><p>The full address appears right after you claim.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container reveal">
+      <div class="cta-band">
+        <h2>Ready to waste less?</h2>
+        <p>Create a free account and make your first donation or claim today.</p>
+        <a href="register.html" class="btn">Get started</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>&copy; 2026 FoodBridge</span>
+      <nav class="nav-links">
+        <a href="#how-it-works">How it works</a>
+        <a href="login.html">Log in</a>
+        <a href="register.html">Register</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/format.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/landing.js"></script>
+  <script src="../js/ui.js"></script>
+</body>
+</html>

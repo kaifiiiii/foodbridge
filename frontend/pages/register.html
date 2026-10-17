@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | FoodBridge</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">FoodBridge</a>
+      <nav class="nav-links"><a href="login.html">Log in</a></nav>
+    </div>
+  </header>
+  
+  <main class="container">
+    <div class="card auth-card">
+      <h1>Create your account</h1>
+      <p>Join as a donor or an NGO.</p>
+
+      <div id="form-message" class="form-message" role="alert"></div>
+
+      <form id="register-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name">
+          <div class="field-error" id="name-error"></div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email">
+          <div class="field-error" id="email-error"></div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password (at least 8 characters)</label>
+          <input type="password" id="password" name="password" autocomplete="new-password">
+          <div class="field-error" id="password-error"></div>
+        </div>
+        <div class="form-group">
+          <label for="role">I am registering as</label>
+          <select id="role" name="role">
+            <option value="">Choose...</option>
+            <option value="DONOR">Donor</option>
+            <option value="NGO">NGO</option>
+          </select>
+          <div class="field-error" id="role-error"></div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Register</button>
+      </form>
+
+      <p style="margin-top: 1rem;">Already have an account? <a href="login.html">Log in</a></p>
+    </div>
+  </main>
+    <script src="../js/validation.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/register.js"></script>
+
+  <script src="../js/ui.js"></script>
+</body>
+</html>
